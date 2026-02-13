@@ -162,6 +162,7 @@ ${address}
 
     // Show processing state
     const submitBtn = document.querySelector('.form-submit');
+    const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '⏳ Abriendo WhatsApp...';
     submitBtn.disabled = true;
 
@@ -171,9 +172,55 @@ ${address}
         submitBtn.innerHTML = '✅ Enviado';
 
         // Optional: Close modal after a few seconds
-        setTimeout(closeModal, 2000);
-        submitBtn.innerHTML = 'CONFIRMAR PEDIDO POR WHATSAPP 📲';
-        submitBtn.disabled = false;
+        setTimeout(() => {
+            closeModal();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+
         // this.reset();
     }, 1000);
 });
+
+/* =========================================
+   FAKE SALES NOTIFICATION LOGIC
+   ========================================= */
+const names = [
+    "Lucia Sanchez de Lima", "Maria Gonzalez de Caracas", "Pedro Perez de Valencia",
+    "Ana Rodriguez de Maracaibo", "Carlos Martinez de Barquisimeto", "Luisa Hernandez de Maracay",
+    "Jose Garcia de San Cristobal", "Elena Torres de Puerto La Cruz", "Miguel Diaz de Merida",
+    "Sofia Ruiz de Ciudad Guayana"
+];
+
+const notification = document.getElementById('sales-notification');
+const nameElem = document.getElementById('notification-name');
+const timeElem = document.getElementById('notification-time');
+
+function showNotification() {
+    // Random Data
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomTime = Math.floor(Math.random() * 59) + 1; // 1 to 59 minutes
+
+    // Update Content
+    nameElem.textContent = randomName;
+    timeElem.textContent = randomTime;
+
+    // Show
+    notification.style.display = 'block';
+
+    // Hide after 5 seconds
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 5000);
+}
+
+function closeNotification() {
+    notification.style.display = 'none';
+}
+
+// Initial Delay then Loop
+setTimeout(() => {
+    showNotification();
+    // Repeat every 20 seconds
+    setInterval(showNotification, 20000);
+}, 10000); // Start 10 seconds after load

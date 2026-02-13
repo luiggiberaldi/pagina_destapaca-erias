@@ -796,3 +796,101 @@ textarea {
         padding: 15px;
     }
 }
+
+/* Sales Notification Popup */
+.sales-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    z-index: 2900;
+    /* Below modal but above page content */
+    display: none;
+    /* Hidden by default */
+    border-left: 5px solid #2ecc71;
+    max-width: 320px;
+    animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.notification-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    color: #333;
+}
+
+.notification-title {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.notification-time {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.close-notification {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 0.5;
+}
+
+.close-notification:hover {
+    color: #333;
+}
+
+@media (max-width: 480px) {
+    .sales-notification {
+        bottom: auto;
+        top: 20px;
+        /* Top on mobile to avoid covering CTA */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        animation: slideDown 0.5s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translate(-50%, -100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+    }
+}
