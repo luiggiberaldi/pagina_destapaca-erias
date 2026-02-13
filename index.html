@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUSH™ | DESTAPA CAÑERIAS AL INSTANTE Y RINDE MAS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="announcement-bar">
+            <span>🔥 OFERTA DE SAN VALENTIN - TERMINA EN <span id="countdown">01:55:05</span></span>
+        </div>
+        <div class="marquee-bar">
+            <div class="marquee-content">
+                <span>• 60% OFF • DELIVERY GRATIS • ENVIO NACIONAL GRATIS • PAGA AL RECIBIR • 60% OFF • DELIVERY
+                    GRATIS</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-container">
+
+        <!-- Hero Section -->
+        <section class="product-hero">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="current-image"
+                        src="https://minotienda.shop/cdn/shop/files/PORTADA_RUSH_2.gif?v=1770165742&width=3840"
+                        alt="RUSH Destapa Cañerias">
+                </div>
+                <div class="thumbnails">
+                    <!-- Images from JSON -->
+                    <img src="https://minotienda.shop/cdn/shop/files/PORTADA_RUSH_2.gif?v=1770165742&width=3840"
+                        onclick="changeImage(this.src)">
+                    <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/978607172178.jpg?v=1759406759"
+                        onclick="changeImage(this.src)">
+                    <img src="https://minotienda.shop/cdn/shop/files/MercadoLider-en-Mercado-Libre.webp?v=1757364767&width=3840"
+                        onclick="changeImage(this.src)">
+                    <img src="https://minotienda.shop/cdn/shop/files/20260203_1957_ImageGeneration_remix_01kgjyzh6qetg95x0xjyn327j5.png?v=1770165402&width=1946"
+                        onclick="changeImage(this.src)">
+                    <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH.webp?v=1758168145"
+                        onclick="changeImage(this.src)">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="rating-badge">
+                    <span>★★★★★</span> 4.8/5 (8500+ Clientes Felices)
+                </div>
+                <h1 class="product-title">RUSH™ | DESTAPA CAÑERIAS AL INSTANTE Y RINDE MAS</h1>
+
+                <div class="price-container">
+                    <span class="sale-price">$19.95 USD</span>
+                    <span class="original-price">$30.00 USD</span>
+                    <span class="discount-badge">AHORRA 33%</span>
+                </div>
+
+                <div class="payment-badges">
+                    <span>💳 Paga al Recibir (Efectivo/Zelle/Pago Móvil)</span>
+                </div>
+
+                <p class="scarcity-text">🔥 ¡Solo quedan 7 unidades a este precio!</p>
+
+                <div class="bundle-selector">
+                    <div class="bundle-card selected" onclick="selectBundle(1, 19.95, '1 Unidad')">
+                        <div class="bundle-header">1 Unidad</div>
+                        <div class="bundle-price">$19.95</div>
+                        <div class="bundle-savings">Precio Regular</div>
+                    </div>
+                    <div class="bundle-card popular" onclick="selectBundle(2, 30.00, '2 Unidades 2x30')">
+                        <div class="bundle-tag">MÁS VENDIDO 🔥</div>
+                        <div class="bundle-header">2 Unidades</div>
+                        <div class="bundle-price">$30.00</div>
+                        <div class="bundle-savings">Ahorras $10</div>
+                    </div>
+                    <div class="bundle-card" onclick="selectBundle(3, 45.00, '3 Unidades 3x45')">
+                        <div class="bundle-tag" style="background: #2ecc71;">MEJOR OFERTA 🌟</div>
+                        <div class="bundle-header">3 Unidades</div>
+                        <div class="bundle-price">$45.00</div>
+                        <div class="bundle-savings">Ahorras $15</div>
+                    </div>
+                </div>
+
+                <button class="cta-button">
+                    REALIZAR PEDIDO - Paga al Recibir 🚚
+                    <span class="subtext">Oferta por tiempo limitado</span>
+                </button>
+
+                <div class="trust-icons">
+                    <div class="icon-item">🚚 Expreso</div>
+                    <div class="icon-item">🛡️ Garantia</div>
+                    <div class="icon-item">🔒 Seguro</div>
+                </div>
+
+                <div class="short-description">
+                    <ul>
+                        <li>💥 Poder Implacable contra atascos extremos.</li>
+                        <li>⚡ Resultados Express en solo minutos.</li>
+                        <li>✨ Uso Simple: vierte el producto y listo.</li>
+                        <li>💸 Ahorra Dinero y evita al plomero.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long Description Content -->
+        <section class="product-details-content">
+
+            <div class="content-block">
+                <h2>¿Tubería Lenta o Atascada? Se Acabó el Estrés.</h2>
+                <p>¿Sientes esa frustración al ver que el agua no baja? Ese mal olor que no se va y el pánico de pensar
+                    a quién llamar y cuánto te va a costar. Olvídate de todo eso. La solución definitiva está aquí.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH-GIF.webp?v=1758165008"
+                    alt="RUSH Action GIF">
+            </div>
+
+            <div class="content-block">
+                <h2>Poder de Grado Industrial en Casa 🌪</h2>
+                <p>Tecnología UNICA de Disolución "Total-Flow". Su fórmula en polvo concentrado ataca y desintegra la
+                    grasa, el cabello y los restos de comida más difíciles que otros productos simplemente no pueden
+                    tocar.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH-GIF-2.webp?v=1758165460"
+                    alt="Dissolving Action">
+            </div>
+
+            <div class="content-block">
+                <h2>De Crisis a Solución en 15 Minutos</h2>
+                <p>Tu tiempo vale más que pasarlo luchando con un atasco. La acción ultra-rápida "15-Min Rescue" de RUSH
+                    devuelve la normalidad a tu hogar en lo que te preparas un café. Se acabaron los días de espera.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH-GIF-03.webp?v=1758166510"
+                    alt="Fast Results">
+            </div>
+
+            <div class="content-block">
+                <h2>Tan Fácil como Verter y Olvidarte</h2>
+                <p>No necesitas herramientas, fuerza ni experiencia. Con nuestro sistema de aplicación "Pour & Go", solo
+                    tienes que verter el producto en el desagüe, añadir agua caliente y dejar que la química haga todo
+                    el trabajo sucio por ti.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/20250917_2345_Destapa-Tuberias-con-Satisfaccion_remix_01k5deqn6sf0xvrfpk6phh37j7.webp?v=1758167245"
+                    alt="Easy to Use">
+            </div>
+
+            <div class="content-block">
+                <h2>Ahorra el Dinero del Plomero 💵</h2>
+                <p>Imagina tener el poder de resolver una emergencia costosa por una fracción mínima del precio. RUSH no
+                    es un gasto, es la inversión más inteligente para proteger tu bolsillo y evitar esas facturas
+                    exorbitantes e inesperadas.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH.webp?v=1758168145"
+                    alt="Save Money">
+            </div>
+
+            <div class="content-block">
+                <h2>Recupera la Paz Mental de tu Hogar</h2>
+                <p>Siente el alivio de saber que cualquier atasco tiene una solución inmediata en tu despensa. Despídete
+                    de la ansiedad de un desagüe lento y del estrés de un hogar que no funciona al 100%. Tu tranquilidad
+                    no tiene precio.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH-_1.webp?v=1758168947"
+                    alt="Peace of Mind">
+            </div>
+
+            <div class="content-block">
+                <h2>Conviértete en el Héroe que Resuelve 🦸</h2>
+                <p>Siente el orgullo y la satisfacción de solucionar el problema por tu cuenta. Con RUSH, no solo
+                    destapas una tubería, sino que tomas el control, demuestras tu capacidad y te conviertes en el héroe
+                    anónimo de tu hogar.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/20250918_0021_Superheroina-del-Hogar_remix_01k5dgsndqef3b7ydmqdf1y26y.webp?v=1758169422"
+                    alt="Hero">
+            </div>
+
+            <div class="content-block">
+                <h2>Únete a los Miles de Venezolanos que Ya Resolvieron con RUSH 🌪</h2>
+                <p>Dejaron atrás la frustración de los productos que no funcionan y la ansiedad de una llamada costosa
+                    al plomero. Hoy, viven con la confianza de que cualquier atasco es solo un inconveniente de 15
+                    minutos, no una crisis de fin de semana.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH-_2.webp?v=1758170226"
+                    alt="Social Proof">
+            </div>
+
+            <div class="content-block">
+                <h2>No Esperes a que Ocurra la Emergencia ⚠</h2>
+                <p>Un atasco nunca avisa. Tener RUSH en casa es la diferencia entre un pequeño inconveniente de 15
+                    minutos y una crisis de fin de semana. Prepárate hoy y ahórrate el dolor de cabeza de mañana.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>+ GUIA: CONVIERTETE EN PLOMERO EXPERTO DE REGALO🎁</h3>
+                <p class="price-strike">$5.00</p>
+                <p class="free-text">GRATIS con tu compra hoy</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Preguntas Frecuentes</h2>
+
+                <details>
+                    <summary>¿Realmente funciona en atascos severos?</summary>
+                    <p>Sí. RUSH está diseñado precisamente para los atascos severos que otros productos no pueden
+                        resolver. Su fórmula concentrada disuelve eficazmente la grasa, el cabello y los restos de
+                        comida más difíciles.</p>
+                </details>
+
+                <details>
+                    <summary>¿Puede dañar mis tuberías, especialmente si son viejas?</summary>
+                    <p>No. Es completamente seguro para todo tipo de tuberías domésticas (PVC, plástico, cobre), incluso
+                        las más antiguas. Su fórmula actúa sobre la materia orgánica del atasco sin corroer los
+                        materiales de la cañería.</p>
+                </details>
+
+                <details>
+                    <summary>¿Por qué elegir RUSH y no otras opciones?</summary>
+                    <p>Porque RUSH te ofrece la potencia de una solución profesional al costo de un producto que aplicas
+                        tú mismo. Es más rápido y económico que un plomero, y mucho más efectivo que los limpiadores
+                        comunes.</p>
+                </details>
+
+                <details>
+                    <summary>¿Cómo uso RUSH para destapar una tubería?</summary>
+                    <ol>
+                        <li>1️⃣ Vierte el Polvo Completo: Con la menor cantidad de agua estancada posible, vierte todo
+                            el contenido de la botella directamente en el desagüe.</li>
+                        <li>2️⃣ Espera 15 Minutos: Deja que la fórmula actúe y disuelva la obstrucción.</li>
+                        <li>3️⃣ Enjuaga con Agua Caliente: Pasados los 15 minutos, vierte lentamente un litro de agua
+                            bien caliente.</li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>¿Hacen delivery en Valencia o son tienda física?</summary>
+                    <p>Ofrecemos delivery gratis en la gran Valencia. También puedes retirar tu pedido personalmente en
+                        nuestro punto aliado en el C.C. Trigaleña Plaza, adicional ofrecemos envío nacional a través de
+                        MRW.</p>
+                </details>
+            </div>
+
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://xsgames.co/randomusers/assets/avatars/female/45.jpg" alt="Mónica L."
+                        class="avatar">
+                    <div class="reviewer-info">
+                        <h3>Mónica L.</h3>
+                        <span>Valencia, Carabobo</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Mira, ya uno está cansado de que la cañería de la cocina se tape cada dos por tres. Compré RUSH como
+                    para ver si era verdad tanta maravilla. Chama, ¡santo remedio! Lo eché y listo el pollo, en 20
+                    minutos todo fino. Qué paz mental, de verdad."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://xsgames.co/randomusers/assets/avatars/male/32.jpg" alt="Carlos R." class="avatar">
+                    <div class="reviewer-info">
+                        <h3>Carlos R.</h3>
+                        <span>Caracas, Distrito Capital</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Tenía el baño tapado desde hace dos días y ya iba a llamar al plomero que me cobra un ojo de la
+                    cara. Un amigo me recomendó esto y en serio funcionó rapidito. Me ahorré como 40 dólares.
+                    Recomendado 100%."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://xsgames.co/randomusers/assets/avatars/female/68.jpg" alt="Elena G."
+                        class="avatar">
+                    <div class="reviewer-info">
+                        <h3>Elena G.</h3>
+                        <span>Maracay, Aragua</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Excelente producto. Llegó el mismo día que lo pedí y el delivery fue gratis. Lo usé en la ducha que
+                    no bajaba casi agua y quedó como nueva. Huele fuerte pero hace el trabajo."</p>
+            </div>
+        </section>
+
+        <!-- Sticky Cart Bar (Mobile & Desktop) -->
+        <div class="sticky-cart-bar" id="sticky-cart">
+            <div class="cart-info">
+                <img src="https://minotienda.shop/cdn/shop/files/PORTADA_RUSH_2.gif?v=1770165742&width=3840" alt="RUSH">
+                <div class="cart-text">
+                    <span class="cart-title">RUSH™ | Destapa Cañerias</span>
+                    <span class="cart-price">$19.95</span>
+                </div>
+            </div>
+            <button class="cta-button small">PEDIR AHORA 👇</button>
+        </div>
+
+        <!-- Order Form Modal -->
+        <div id="order-modal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+
+                <div class="form-header">
+                    <h2>🔥 Finalizar Compra - Paga al Recibir</h2>
+                    <p>Completa tus datos para enviarte tu pedido.</p>
+                </div>
+
+                <div class="order-summary">
+                    <img src="https://minotienda.shop/cdn/shop/files/PORTADA_RUSH_2.gif?v=1770165742&width=3840"
+                        alt="RUSH Product" class="summary-img">
+                    <div class="summary-details">
+                        <h3 id="modal-summary-title">RUSH™ | DESTAPA CAÑERIAS (x1)</h3>
+                        <p class="summary-price" id="modal-summary-price">$19.95 USD <span class="old-price"
+                                id="modal-old-price">$30.00</span></p>
+                    </div>
+                </div>
+
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-group">
+                        <label for="full-name">Nombre y Apellido</label>
+                        <input type="text" id="full-name" placeholder="Ej: Maria Perez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono (WhatsApp)</label>
+                        <input type="tel" id="phone" placeholder="Ej: 0412-1234567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Dirección Exacta</label>
+                        <textarea id="address" placeholder="Ej: Av. Bolivar, Edif. Azul, Piso 2, Apto 2B"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="state">Estado</label>
+                            <select id="state" required onchange="checkShippingMethod()">
+                                <option value="" disabled selected>Estado</option>
+                                <optgroup label="✅ Paga al Recibir (COD)">
+                                    <option value="Distrito Capital">Distrito Capital</option>
+                                    <option value="Miranda">Miranda</option>
+                                    <option value="La Guaira">La Guaira</option>
+                                    <option value="Carabobo">Carabobo</option>
+                                    <option value="Aragua">Aragua</option>
+                                    <option value="Lara">Lara</option>
+                                    <option value="Yaracuy">Yaracuy</option>
+                                    <option value="Zulia">Zulia</option>
+                                </optgroup>
+                                <optgroup label="🚚 Envío Nacional">
+                                    <option value="Otro">Otro Estado (Cobro a Destino)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" id="city" placeholder="Ej: Valencia" required>
+                        </div>
+                    </div>
+
+                    <div id="shipping-message" class="shipping-info"
+                        style="display:none; margin-bottom:15px; font-size:0.9rem; padding:10px; border-radius:6px;">
+                        <!-- JS will populate this -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reference">Punto de Referencia (Opcional)</label>
+                        <input type="text" id="reference" placeholder="Ej: Frente a la farmacia">
+                    </div>
+
+                    <button type="submit" class="cta-button form-submit">
+                        CONFIRMAR PEDIDO POR WHATSAPP 📲
+                        <span class="subtext">Te atenderemos de inmediato</span>
+                    </button>
+
+                    <p class="security-note">🔒 Tus datos están 100% seguros y encriptados.</p>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026, KiplyStart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
