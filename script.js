@@ -160,6 +160,18 @@ ${address}
     // Encode for URL with %20 instead of + to ensure compatibility
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
+    // Track Purchase Event in Meta Pixel
+    if (typeof fbq === 'function') {
+        fbq('track', 'Purchase', {
+            value: currentBundle.price,
+            currency: 'USD',
+            content_name: currentBundle.name,
+            content_ids: ['RUSH-001'],
+            content_type: 'product',
+            num_items: currentBundle.unit
+        });
+    }
+
     // Show processing state
     const submitBtn = document.querySelector('.form-submit');
     const originalText = submitBtn.innerHTML;

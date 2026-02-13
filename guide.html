@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Definitiva: Maestro Plomero - RUSH™</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary-red: #d32f2f;
+            --secondary-blue: #1565c0;
+            --text-black: #212121;
+            --text-gray: #555;
+            --light-bg: #f9f9f9;
+            --accent-gold: #ffb300;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-black);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* Print Settings */
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        .page {
+            page-break-after: always;
+            min-height: 25cm;
+            /* Approximation for A4 content area */
+            position: relative;
+            padding: 2cm 0;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0 0 1rem 0;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--primary-red);
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #444;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--primary-red);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            color: var(--secondary-blue);
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Components */
+        .cover {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            border: 8px double var(--primary-red);
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .cover img {
+            max-width: 80%;
+            border-radius: 5px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin: 2rem 0;
+        }
+
+        .toc {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #ccc;
+            padding: 10px 0;
+            font-weight: 500;
+        }
+
+        .box {
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .box-tip {
+            background: #fff8e1;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .box-warning {
+            background: #ffebee;
+            border-left: 5px solid var(--primary-red);
+        }
+
+        .box-pro {
+            background: #e3f2fd;
+            border-left: 5px solid var(--secondary-blue);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        /* Utilities */
+        .highlight {
+            background: linear-gradient(120deg, #ffd54f 0%, #fff 100%);
+            padding: 0 5px;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Instructions -->
+    <div class="no-print"
+        style="position:fixed; top:0; left:0; right:0; background:#222; color:#fff; padding:15px; text-align:center; z-index:9999;">
+        <span>🖨️ Para guardar como PDF: Presiona <b>CTRL + P</b> y selecciona "Guardar como PDF".</span>
+        <button onclick="this.parentElement.style.display='none'"
+            style="margin-left:20px; cursor:pointer;">Cerrar</button>
+    </div>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page cover">
+        <div>
+            <span style="letter-spacing: 5px; text-transform: uppercase; color: #666; font-size: 0.9rem;">Guía Oficial
+                RUSH™</span>
+            <h1>MAESTRO<br>PLOMERO</h1>
+            <h2>Manual Definitivo de Mantenimiento y Desatasco</h2>
+        </div>
+
+        <img src="https://cdn.shopify.com/s/files/1/0639/1224/7409/files/RUSH.webp?v=1758168145" alt="Rush Bottle"
+            style="height:400px; object-fit: contain;">
+
+        <div>
+            <p><b>Edición 2026</b> | Incluye Secretos Profesionales</p>
+        </div>
+    </div>
+
+    <!-- PAGE 2: TABLE OF CONTENTS & WELCOME -->
+    <div class="page">
+        <h3>Bienvenido al Club de los Expertos</h3>
+        <p>Tener un hogar libre de problemas de plomería no es cuestión de suerte, es cuestión de <b>conocimiento</b>.
+            Al adquirir RUSH™, no solo compraste un producto químico; adquiriste la herramienta más potente del mercado.
+        </p>
+        <p>Esta guía extendida te enseñará no solo a usar el producto, sino a pensar como un plomero profesional para
+            ahorrarte cientos de dólares en reparaciones.</p>
+
+        <div class="toc">
+            <h4 style="margin-top:0;">📋 Tabla de Contenidos</h4>
+            <div class="toc-item"><span>1. La Anatomía de tus Tuberías</span> <span>Pág. 3</span></div>
+            <div class="toc-item"><span>2. Los 4 Enemigos Silenciosos</span> <span>Pág. 4</span></div>
+            <div class="toc-item"><span>3. Protocolo RUSH™ Avanzado</span> <span>Pág. 5</span></div>
+            <div class="toc-item"><span>4. Guía Específica por Zona (Cocina vs Baño)</span> <span>Pág. 6</span></div>
+            <div class="toc-item"><span>5. Rutina de Mantenimiento de 5 Minutos</span> <span>Pág. 7</span></div>
+            <div class="toc-item"><span>6. Preguntas Frecuentes y Mitos</span> <span>Pág. 8</span></div>
+        </div>
+
+        <div class="page-number">2</div>
+    </div>
+
+    <!-- PAGE 3: ANATOMY -->
+    <div class="page">
+        <h3>1. La Anatomía de tus Tuberías</h3>
+        <p>Para solucionar un problema, primero debes entender cómo funciona. La mayoría de los desagües en tu casa
+            tienen una forma de "S" o "U" llamada <b>Sifón</b> debajo del fregadero.</p>
+
+        <div class="box box-pro">
+            <h4>🔧 ¿Por qué existe el Sifón?</h4>
+            <p>Esa curva tiene agua estancada a propósito. Su función es <b>bloquear los malos olores</b> del
+                alcantarillado para que no suban a tu casa. Sin embargo, esa misma curva es donde el 90% de los atascos
+                ocurren.</p>
+        </div>
+
+        <p>Cuando aplicas RUSH™, tu objetivo es que el producto llegue y se asiente en esa curva (el sifón), que es
+            donde la materia orgánica se acumula.</p>
+
+        <div class="page-number">3</div>
+    </div>
+
+    <!-- PAGE 4: ENEMIES -->
+    <div class="page">
+        <h3>2. Los 4 Enemigos Silenciosos</h3>
+        <p>Identificar qué está causando el bloqueo es clave para atacarlo efectivamente.</p>
+
+        <h4>🥩 1. Grasa y Aceite (El Enemigo #1)</h4>
+        <p>La grasa líquida se enfría y solidifica como cera de vela dentro de la tubería. <b>RUSH™ genera calor
+                térmico</b> específicamente diseñado para derretir esta grasa al contacto.</p>
+
+        <h4>�‍♀️ 2. Cabello y Queratina</h4>
+        <p>En el baño, el cabello crea redes que atrapan jabón y piel muerta. RUSH™ disuelve la queratina del cabello,
+            rompiendo la estructura de la "bola de pelo".</p>
+
+        <h4>🧼 3. Escoria de Jabón</h4>
+        <p>El jabón en barra contiene grasas animales que se pegan a las paredes del tubo, reduciendo el diámetro paso a
+            paso hasta cerrarlo por completo.</p>
+
+        <h4>🍚 4. Residuos Orgánicos de Comida</h4>
+        <p>Arroz, pasta y cáscaras. Aunque parezcan pequeños, se expanden con el agua y crean tapones sólidos.</p>
+
+        <div class="page-number">4</div>
+    </div>
+
+    <!-- PAGE 5: RUSH PROTOCOL -->
+    <div class="page">
+        <h3>3. Protocolo RUSH™ Avanzado</h3>
+        <p>Sigue estos pasos para garantizar el éxito. No es solo "echar y ya", es un proceso científico.</p>
+
+        <h4>Paso 1: Evacuación Previa</h4>
+        <p>Si el fregadero está lleno de agua hasta el tope, saca la mayor cantidad posible con una taza. Necesitamos
+            que RUSH™ esté concentrado, no diluido en 10 litros de agua.</p>
+
+        <h4>Paso 2: La Aplicación Estratégica</h4>
+        <ul class="checklist">
+            <li>Usa guantes de protección.</li>
+            <li>Vierte el producto directamente en el hueco del desagüe.</li>
+            <li>No inhales los vapores; si sale humo, es normal (es la reacción térmica), pero mantén la distancia.</li>
+        </ul>
+
+        <div class="box box-warning">
+            ⚠️ <b>ALERTA DE SEGURIDAD:</b> RUSH™ es potente. NUNCA lo mezcles con cloro, lejía, ácido muriático o
+            vinagre al mismo tiempo. La reacción química puede ser peligrosa.
+        </div>
+
+        <h4>Paso 3: El Tiempo de Incubación</h4>
+        <p>La paciencia es tu amiga. Para bloqueos totales, déjalo actuar toda la noche. Para mantenimiento o flujo
+            lento, 30 minutos es suficiente.</p>
+
+        <div class="page-number">5</div>
+    </div>
+
+    <!-- PAGE 6: ZONES -->
+    <div class="page">
+        <h3>4. Guía Específica por Zona</h3>
+        <p>No todos los desagües son iguales. Aquí te explicamos cómo atacar cada uno.</p>
+
+        <h4>🍳 Fregadero de Cocina</h4>
+        <p><b>El problema principal:</b> Grasa y comida.<br>
+            <b>La Estrategia:</b> Vierte RUSH™ y después de 30 minutos, vierte <b>una olla de agua hirviendo</b>. El
+            calor del agua hirviendo ayuda a empujar la grasa que RUSH™ ya ablandó.
+        </p>
+
+        <h4>🚿 Ducha y Lavamanos</h4>
+        <p><b>El problema principal:</b> Cabello.<br>
+            <b>La Estrategia:</b> Aplica RUSH™ y déjalo actuar por al menos 1 hora. Luego, abre el grifo de agua
+            caliente (no hirviendo, solo caliente del grifo) a máxima presión por 2 minutos para barrer los restos de
+            cabello disuelto.
+        </p>
+
+        <div class="box box-tip">
+            💡 <b>CONSEJO PRO:</b> Si tienes triturador de alimentos, NO uses RUSH™ directamente en él a menos que estés
+            seguro de que sea compatible química (generalmente es mejor evitarlo para proteger las aspas metálicas).
+        </div>
+
+        <div class="page-number">6</div>
+    </div>
+
+    <!-- PAGE 7: MAINTENANCE -->
+    <div class="page">
+        <h3>5. Rutina de Mantenimiento (5 Minutos)</h3>
+        <p>Evita emergencias futuras con este calendario simple:</p>
+
+        <div class="box box-pro">
+            <h4>📅 El "Domingo de Drenaje" (1 vez al mes)</h4>
+            <ul class="checklist">
+                <li>Hierve 1 litro de agua.</li>
+                <li>Vierte 1/4 de botella de RUSH™ en el fregadero principal y ducha.</li>
+                <li>Espera 20 minutos.</li>
+                <li>"Baja" el producto con el agua caliente.</li>
+            </ul>
+        </div>
+
+        <p>Haciendo esto, mantienes las paredes de la tubería lisas y evitas que la grasa nueva se adhiera.</p>
+
+        <div class="page-number">7</div>
+    </div>
+
+    <!-- PAGE 8: FAQ & MYTHS -->
+    <div class="page">
+        <h3>6. Mitos vs Realidad</h3>
+
+        <h4>❌ Mito: "La Coca-Cola destapa cañerías"</h4>
+        <p><b>Realidad:</b> El ácido fosfórico de los refrescos es demasiado débil para disolver grasa o cabello real.
+            Solo dejarás un desastre pegajoso.</p>
+
+        <h4>❌ Mito: "El café molido limpia la tubería"</h4>
+        <p><b>Realidad:</b> ¡Falso! El café molido es uno de los peores enemigos. Se acumula como arena y crea
+            obstrucciones muy difíciles de quitar.</p>
+
+        <h4>❌ Mito: "Si no baja rápido, echo más producto inmediatamente"</h4>
+        <p><b>Realidad:</b> Dale tiempo al producto. Si echas demasiado químico sin agua que lo mueva, el químico puede
+            cristalizarse. Sigue las instrucciones de tiempo.</p>
+
+        <br><br>
+        <div style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">
+            <p>Gracias por confiar en</p>
+            <h2 style="color:var(--primary-red); margin:0;">RUSH™</h2>
+            <p>Soporte 24/7 vía WhatsApp</p>
+        </div>
+
+        <div class="page-number">8</div>
+    </div>
+
+</body>
+
+</html>

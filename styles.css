@@ -593,6 +593,54 @@ textarea {
     gap: 5px;
 }
 
+/* Free Gift Bonus */
+.free-gift-container {
+    background: #fff8e1;
+    border: 1px dashed #fbc02d;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.gift-icon {
+    font-size: 1.5rem;
+}
+
+.gift-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.gift-price {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.price-strike {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+}
+
+.price-free {
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+/* Mobile Adjustments for Gift */
+@media (max-width: 767px) {
+    .free-gift-container {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
+
 /* Sticky Cart Bar Premium Redesign */
 .sticky-cart-bar {
     position: fixed;
