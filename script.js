@@ -137,24 +137,27 @@ document.getElementById('checkout-form').addEventListener('submit', function (e)
     const isCOD = codZones.includes(state);
     const paymentMethod = isCOD ? "Paga al Recibir (COD)" : "Envío Nacional (Cobro a Destino)";
 
-    // Construct WhatsApp Message
+    // Construct WhatsApp Message (Professional Format)
     const phoneNumber = "584144124771";
     const message = `
-*🔥 ¡NUEVO PEDIDO RUSH!*
+PEDIDO WEB - RUSH
 
-*📦 Oferta:* ${currentBundle.name}
-*💰 Total:* $${currentBundle.price.toFixed(2)} USD
+RESUMEN DE COMPRA:
+Producto: ${currentBundle.name}
+Total a Pagar: $${currentBundle.price.toFixed(2)} USD
 
-*👤 Cliente:* ${name}
-*📞 Teléfono:* ${phone}
+DATOS DEL CLIENTE:
+Nombre: ${name}
+Telefono: ${phone}
 
-*📍 Dirección de Envío:*
+DIRECCION DE ENTREGA:
 ${address}
-*Ciudad:* ${city}
-*Estado:* ${state}
-*Punto de Ref:* ${reference}
+Ciudad: ${city}
+Estado: ${state}
+Ref: ${reference}
 
-*🚚 Método de Envío:* ${paymentMethod}
+METODO DE ENVIO:
+${paymentMethod}
     `.trim();
 
     // Encode for URL with %20 instead of + to ensure compatibility
@@ -170,7 +173,16 @@ ${address}
             content_type: 'product',
             num_items: currentBundle.unit
         });
+        console.log("✅ Meta Pixel Purchase Event Sent:", {
+            value: currentBundle.price,
+            currency: 'USD',
+            items: currentBundle.name
+        });
+    } else {
+        console.warn("⚠️ Meta Pixel not loaded properly (Are you running locally?)");
     }
+
+    // Show processing state
 
     // Show processing state
     const submitBtn = document.querySelector('.form-submit');
